@@ -15,3 +15,4 @@ the old one.
 | [0002](/decisions/0002-claims-and-leases/) | Coordination claims live in cynapse; leases and presence live in the runtime | Accepted |
 | [0003](/decisions/0003-worktrees-through-the-runtime/) | cyber-mux worktrees are reached only through the runtime's workspace adapter | Accepted |
 | [0004](/decisions/0004-opaque-service-keys/) | Runtime services take opaque keys; project addressing lives in cynapse | Accepted |
+| [0005](/decisions/0005-foundation-depends-on-no-agent-layer-package/) | The foundation depends on no agent-layer package | Accepted |
