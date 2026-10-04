@@ -34,16 +34,24 @@ pnpm typecheck    # astro check, 0 errors
 
 ## The glyph
 
-The mark is a slender tower on a base with a four-point AI spark at its tip (candidate I in the
-2026-10-04 glyph study), inside the shared cyber-* frame. The icon-system rule asks for a literal
-glyph; the package name is the metaphor, so drawing the structure is the literal reading.
+The mark is three citizens, the front one an agent whose head is the four-point AI spark
+(candidate D in the 2026-10-04 civitas glyph study), inside the shared cyber-* frame. The name
+is about the community, not the building, so the glyph draws the citizens: people and agents as
+one citizenry. At 16px the spark fills in and the mark reads as a group of three, which stays
+legible; from 32px up the spark shows.
 
-Backups, if I proves too thin at favicon size:
+The two figures behind are cut by a mask: the front figure stroked at width 10, so a 5-unit gap
+separates them at every size. Keep the mask when editing the shapes, or the figures merge into
+one blob at favicon size.
 
-- **A**, stacked layers: `M52 32h24v14H52zM42 57h44v14H42zM32 82h64v14H32z`
-- **N**, arcology under an AI spark:
-  `M32 96 45 62h38l13 34Z M49 80h8v8h-8z M60 80h8v8h-8z M71 80h8v8h-8z M64 28q2.6 11 13 13q-10.4 2-13 13q-2.6-11-13-13q10.4-2 13-13Z`
-  with `fill-rule="evenodd"` so the windows cut out.
+Fallback, if the spark ever needs to go: **C**, the same group with a round head
+(`<circle cx="64" cy="46" r="11"/>`) in place of the spark.
 
-A glyph change touches all three files: `public/img/logo.svg`, `src/assets/logo-light.svg`,
-`src/assets/logo-dark.svg`.
+Rejected in the study: the tower and arcology glyphs (they draw the building the rename moved
+away from), stacked layers (a diagram, not a community), a ring of citizens (a loading spinner at
+16px), and a hemicycle assembly (one-pixel seats at 16px).
+
+A glyph change touches all three SVGs, `public/img/logo.svg`, `src/assets/logo-light.svg` and
+`src/assets/logo-dark.svg`, and the two org avatar renders, `brand/org-avatar-light.png` and
+`brand/org-avatar-dark.png` (512px, rendered from the header pair). GitHub takes only raster
+images for an avatar, so those stay PNG.

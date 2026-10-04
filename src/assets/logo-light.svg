@@ -3,7 +3,21 @@
     <path d="M17 63V17h46"/>
     <path d="M111 65v46H65"/>
   </g>
+  <mask id="front" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128">
+    <rect width="128" height="128" fill="#fff"/>
+    <g fill="#000" stroke="#000" stroke-width="10" stroke-linejoin="round">
+    <path d="M64 33q2.6 11 13 13q-10.4 2-13 13q-2.6-11-13-13q10.4-2 13-13Z"/>
+    <path d="M46 96v-16a18 18 0 0 1 36 0v16Z"/>
+    </g>
+  </mask>
+  <g fill="#10111a" mask="url(#front)">
+    <circle cx="40" cy="58" r="8"/>
+    <path d="M28 96v-13a12 12 0 0 1 24 0v13Z"/>
+    <circle cx="88" cy="58" r="8"/>
+    <path d="M76 96v-13a12 12 0 0 1 24 0v13Z"/>
+  </g>
   <g fill="#10111a">
-    <path d="M44 96v-7h40v7Z M55 89l4-31h10l4 31Z M64 28q2.6 11 13 13q-10.4 2-13 13q-2.6-11-13-13q10.4-2 13-13Z"/>
+    <path d="M64 33q2.6 11 13 13q-10.4 2-13 13q-2.6-11-13-13q10.4-2 13-13Z"/>
+    <path d="M46 96v-16a18 18 0 0 1 36 0v16Z"/>
   </g>
 </svg>
