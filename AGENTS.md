@@ -31,3 +31,19 @@ pnpm typecheck    # astro check, 0 errors
 - **Theme and icon** come from the cyber-* family (cyberuni/cyber-mux
   `docs/design/icon-system.md`). Keep the frame paths verbatim; the toolchain versions are
   pinned to cyber-mux's known-good set.
+
+## The glyph
+
+The mark is a slender tower on a base with a four-point AI spark at its tip (candidate I in the
+2026-10-04 glyph study), inside the shared cyber-* frame. The icon-system rule asks for a literal
+glyph; the package name is the metaphor, so drawing the structure is the literal reading.
+
+Backups, if I proves too thin at favicon size:
+
+- **A**, stacked layers: `M52 32h24v14H52zM42 57h44v14H42zM32 82h64v14H32z`
+- **N**, arcology under an AI spark:
+  `M32 96 45 62h38l13 34Z M49 80h8v8h-8z M60 80h8v8h-8z M71 80h8v8h-8z M64 28q2.6 11 13 13q-10.4 2-13 13q-2.6-11-13-13q10.4-2 13-13Z`
+  with `fill-rule="evenodd"` so the windows cut out.
+
+A glyph change touches all three files: `public/img/logo.svg`, `src/assets/logo-light.svg`,
+`src/assets/logo-dark.svg`.
