@@ -1,0 +1,9 @@
+allowBuilds:
+  esbuild: true
+  sharp: true
+
+# Supply-chain soak: no dependency may be installed until it has been on the registry for 24h.
+# It must live here (not .npmrc), and Strict is what makes a too-young package fail instead of
+# being waived silently. Same policy as cyberuni/cyber-mux.
+minimumReleaseAge: 1440 # 1 day
+minimumReleaseAgeStrict: true

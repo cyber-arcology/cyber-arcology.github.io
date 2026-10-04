@@ -1,0 +1,35 @@
+---
+title: cyber-arcology
+description: A self-contained system for running AI coding agents across your projects.
+template: splash
+hero:
+  tagline: One structure for AI coding agents. A fleet directs the work, a runtime runs the sessions, channels carry the conversation, and a change process keeps every repository settled.
+  actions:
+    - text: What is it
+      link: /what-is/
+      icon: right-arrow
+    - text: Architecture
+      link: /architecture/layers/
+      icon: open-book
+      variant: minimal
+    - text: GitHub
+      link: https://github.com/cyber-arcology
+      icon: github
+      variant: minimal
+---
+
+import { CardGrid, LinkCard } from '@astrojs/starlight/components'
+
+:::note[Early days]
+The packages ship and evolve independently, and several are still prototypes or designs.
+Each page says which parts are built and which are planned.
+:::
+
+<CardGrid>
+	<LinkCard title="What is cyber-arcology" href="/what-is/" description="The problem, the shape of the answer, and what it is not." />
+	<LinkCard title="Layers" href="/architecture/layers/" description="Who owns what, and which way dependencies point." />
+	<LinkCard title="Using parts on their own" href="/architecture/independent-use/" description="Which packages are useful without the rest." />
+	<LinkCard title="Fleet vocabulary" href="/architecture/vocabulary/" description="Council, Operator, Captain, Pod, mission, and sortie." />
+	<LinkCard title="Components" href="/components/" description="Every package, its job, and its status." />
+	<LinkCard title="Decisions" href="/decisions/" description="The cross-package rules, and why each one holds." />
+</CardGrid>

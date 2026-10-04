@@ -1,0 +1,73 @@
+---
+title: Layers
+description: The layers of cyber-arcology, what each one owns, and the rules for which way dependencies point.
+---
+
+import LayerDiagram from '../../../components/LayerDiagram.astro'
+
+Products sit at the top and compose everything below. The packages lower down are more
+stable, and nothing below may depend on anything above.
+
+<LayerDiagram />
+
+## What each layer owns
+
+### Products
+
+**cyberfleet** is policy. It decides who owns a piece of work, how a request reaches the
+right project, and what the Council sees. It composes the runtime, the communication
+channels, and the process layer, and nothing depends on it. It is concrete and changes
+often, which is why it sits at the top.
+
+**The Command Center** is the Council's view across the fleet: projects, their Captains and
+Pods, pending decisions, and unread findings. It is planned
+([cyberuni/cyberfleet#24](https://github.com/cyberuni/cyberfleet/issues/24)). It brings
+every lower layer together, so it is the most volatile part of the system and belongs at
+the top with cyberfleet.
+
+### Process
+
+**cyber-truss** holds a repository in its settled state across every change: it works out
+which artifacts a change has left inconsistent and what each must now meet.
+**cyber-sdd** is Spec-Driven Development for agents, with the ACED and Quill domain
+plugins. cyber-truss describes SDD as one instance of its model. Neither depends on the
+fleet.
+
+### Communication
+
+**cynapse** holds channels: ordered, append-only sequences of immutable entries, with a
+read position per reader. It owns addressing, so a repository, a project, or a participant
+can be told something by posting to its address channel. It also owns coordination claims
+between participants. It stores only what has no other home and never copies an issue,
+task, or pull request out of the store that owns it. **Cortex** is its local viewer.
+
+cynapse does one job: communication. It does not spawn, wake, or supervise anything.
+
+### Runtime
+
+**cyberlegion** starts, stops, restarts, and nudges agent sessions, rings the doorbell
+when something needs a session's attention, and knows whether a session is alive. It owns
+the fenced lease that gives a service one authoritative runtime, and the workspaces agents
+work in. It drives panes through **cyber-mux**, or runs a forked subagent where there is no
+multiplexer.
+
+### Stores
+
+GitHub, Asana, Slack, Figma, and Linear stay the systems of record. Agents use each
+store's own CLI or MCP server. Relations between work items live as metadata on the items
+themselves, following [dna](https://github.com/cyberuni/dna).
+
+## Dependency rules
+
+1. **The runtime depends on communication, never the reverse.** cynapse is a protocol and
+   changes rarely. The runtime changes with every multiplexer and harness.
+   [Decision 0001](/decisions/0001-runtime-depends-on-communication/).
+2. **Each fact has one home.** A coordination claim between participants lives in cynapse.
+   A session's liveness, and the lease that names which session drives a service, live in
+   the runtime. [Decision 0002](/decisions/0002-claims-and-leases/).
+3. **Worktrees are reached through the runtime.** cyber-mux manages worktrees because
+   multiplexers do, and only the runtime's workspace adapter calls that part of it.
+   [Decision 0003](/decisions/0003-worktrees-through-the-runtime/).
+4. **The runtime takes keys, not identities.** A service is keyed by whatever the caller
+   passes, so the runtime works without cynapse.
+   [Decision 0004](/decisions/0004-opaque-service-keys/).

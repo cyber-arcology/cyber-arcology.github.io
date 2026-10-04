@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="cyber-arcology">
+  <!-- Family frame: the cyber-* command reticle. Identical in every cyber-* package. -->
+  <path class="s" d="M17 63V17h46"/>
+  <path class="s" d="M111 65v46H65"/>
+  <!-- Glyph slot (32..96): cyber-arcology is the layered stack the packages compose into. -->
+  <path class="f" d="M52 32h24v14H52z"/>
+  <path class="f" d="M42 57h44v14H42z"/>
+  <path class="f" d="M32 82h64v14H32z"/>
+  <style>.f{fill:#000}.s{fill:none;stroke:#000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round}@media (prefers-color-scheme:dark){.f{fill:#fff}.s{stroke:#fff}}</style>
+</svg>
