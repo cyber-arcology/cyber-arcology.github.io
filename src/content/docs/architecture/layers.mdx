@@ -57,6 +57,23 @@ GitHub, Asana, Slack, Figma, and Linear stay the systems of record. Agents use e
 store's own CLI or MCP server. Relations between work items live as metadata on the items
 themselves, following [dna](https://github.com/cyberuni/dna).
 
+### Foundation
+
+**agent-harness** is the toolkit for working across agent harnesses. It detects which
+harness is running, among Claude Code, Cursor, Codex, GitHub Copilot CLI, and others, and
+reports `unknown` rather than guess. For a known harness it answers what that harness
+holds: the directories it reads skills from, the plugins installed and enabled, and where
+managed policy lives. Merged but not yet released, it also resolves a named reference
+document, a Markdown file an agent reads on demand, through the managed, project
+(`.agents/references/`), user (`~/.agents/references/`), and plugin tiers, so a repository
+or a person can override a plugin's default without editing the plugin.
+
+**universal-plugin** builds on agent-harness: one plugin manifest, generated for every
+harness.
+
+The foundation depends on no agent-layer package, so every layer above can build on it,
+and so can tools outside cyber-civitas.
+
 ## Dependency rules
 
 1. **The runtime depends on communication, never the reverse.** cynapse is a protocol and
@@ -71,3 +88,7 @@ themselves, following [dna](https://github.com/cyberuni/dna).
 4. **The runtime takes keys, not identities.** A service is keyed by whatever the caller
    passes, so the runtime works without cynapse.
    [Decision 0004](/decisions/0004-opaque-service-keys/).
+5. **The foundation depends on no agent-layer package.** agent-harness and
+   universal-plugin depend on nothing in cyber-civitas and on no other agent tool, and
+   every layer may depend on them. Ordinary npm libraries are fine.
+   [Decision 0005](/decisions/0005-foundation-depends-on-no-agent-layer-package/).
