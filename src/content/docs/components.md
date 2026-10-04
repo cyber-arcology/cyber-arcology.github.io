@@ -19,7 +19,7 @@ locally and has no release; "design" means the model is written and the code is 
 | [cyber-slack](https://github.com/cyberuni/cyber-slack) | Store | Slack CLI and MCP server for agents | published 0.1 |
 | [cyber-figma](https://github.com/cyberuni/cyber-figma) | Store | Figma CLI, MCP server, and plugin for agents | published 0.1 |
 | [dna](https://github.com/cyberuni/dna) | Model | Datum Network Architecture: identity, types, and relations across stores | draft spec |
-| [agent-harness](https://github.com/cyberuni/agent-harness) | Foundation | Detect which agent harness is running | published 0.3 |
+| [agent-harness](https://github.com/cyberuni/agent-harness) | Foundation | Toolkit for working across agent harnesses; reference resolution merged, not yet released | published 0.3 |
 | [universal-plugin](https://github.com/cyberuni/universal-plugin) | Foundation | One plugin manifest, generated for every harness | published 0.11 |
 
 The repositories live in [cyberuni](https://github.com/cyberuni). The

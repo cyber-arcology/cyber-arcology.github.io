@@ -9,6 +9,7 @@ group of users take the other's half.
 
 | Package | Use it alone when you want to |
 | --- | --- |
+| `agent-harness` | make a tool behave correctly under whichever agent harness runs it, or let a repository or user override a named document |
 | `cyber-mux` | drive terminal panes from any tool, whichever multiplexer you are in |
 | `cyberlegion` | spawn and supervise agent sessions, with no messaging |
 | `cynapse` and Cortex | keep durable channels between agents and people, with no spawning: two sessions you opened by hand can still talk |
