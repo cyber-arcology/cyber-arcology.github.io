@@ -1,6 +1,6 @@
 ---
 title: Using parts on their own
-description: Which cyber-arcology packages are useful without the rest, and what stays together.
+description: Which cyber-civitas packages are useful without the rest, and what stays together.
 ---
 
 A package is worth releasing on its own when someone would use it on its own. Each package

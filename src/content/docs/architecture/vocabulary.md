@@ -1,6 +1,6 @@
 ---
 title: Fleet vocabulary
-description: The roles and units of work in cyber-arcology's fleet layer.
+description: The roles and units of work in cyber-civitas's fleet layer.
 ---
 
 :::caution[Design in progress]

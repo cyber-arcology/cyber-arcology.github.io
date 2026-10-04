@@ -1,6 +1,6 @@
 ---
 title: Components
-description: Every cyber-arcology package, its job, and its status.
+description: Every cyber-civitas package, its job, and its status.
 ---
 
 Status as of October 2026. "Published" means on npm; "prototype" means the code works
@@ -23,4 +23,4 @@ locally and has no release; "design" means the model is written and the code is 
 | [universal-plugin](https://github.com/cyberuni/universal-plugin) | Foundation | One plugin manifest, generated for every harness | published 0.11 |
 
 The repositories live in [cyberuni](https://github.com/cyberuni). The
-[cyber-arcology](https://github.com/cyber-arcology) organization holds this site.
+[cyber-civitas](https://github.com/cyber-civitas) organization holds this site.

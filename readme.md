@@ -1,6 +1,6 @@
-# cyber-arcology.github.io
+# cyber-civitas.github.io
 
-The site for [cyber-arcology](https://cyber-arcology.github.io): a self-contained system for
+The site for [cyber-civitas](https://cyber-civitas.github.io): a self-contained system for
 running AI coding agents. It covers the architecture across packages, the fleet vocabulary,
 the component index, and the decisions that span more than one package.
 

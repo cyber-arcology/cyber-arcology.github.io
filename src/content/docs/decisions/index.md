@@ -1,6 +1,6 @@
 ---
 title: Decisions
-description: Architecture decisions that span more than one cyber-arcology package.
+description: Architecture decisions that span more than one cyber-civitas package.
 ---
 
 These records hold the rules no single package can decide alone. A decision inside one

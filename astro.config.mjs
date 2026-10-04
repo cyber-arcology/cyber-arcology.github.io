@@ -6,13 +6,13 @@ import { defineConfig } from "astro/config";
 // This is the org's root Pages site (`<org>.github.io`), so it is served at `/` and needs no
 // `base`. Internal links in content are bare paths (`/architecture/layers/`).
 export default defineConfig({
-  site: "https://cyber-arcology.github.io",
+  site: "https://cyber-civitas.github.io",
   vite: {
     plugins: [tailwindcss()],
   },
   integrations: [
     starlight({
-      title: "cyber-arcology",
+      title: "cyber-civitas",
       description:
         "A self-contained system for running AI coding agents: fleet, runtime, communication, and change process.",
       // The cyber-* family mark: the shared command reticle around a per-package glyph
@@ -23,22 +23,22 @@ export default defineConfig({
       logo: {
         light: "./src/assets/logo-light.svg",
         dark: "./src/assets/logo-dark.svg",
-        alt: "cyber-arcology",
+        alt: "cyber-civitas",
       },
       social: [
         {
           icon: "github",
           label: "GitHub",
-          href: "https://github.com/cyber-arcology",
+          href: "https://github.com/cyber-civitas",
         },
       ],
       customCss: ["./src/styles/global.css"],
       editLink: {
         baseUrl:
-          "https://github.com/cyber-arcology/cyber-arcology.github.io/edit/main/",
+          "https://github.com/cyber-civitas/cyber-civitas.github.io/edit/main/",
       },
       sidebar: [
-        { label: "What is cyber-arcology", slug: "what-is" },
+        { label: "What is cyber-civitas", slug: "what-is" },
         {
           label: "Architecture",
           items: [

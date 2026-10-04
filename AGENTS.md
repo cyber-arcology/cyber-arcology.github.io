@@ -4,8 +4,8 @@ Guidance for AI coding assistants working in this repository.
 
 ## What this repo is
 
-The organization site for cyber-arcology, an Astro + Starlight site served at
-`https://cyber-arcology.github.io`. It holds what spans packages: the layer architecture,
+The organization site for cyber-civitas, an Astro + Starlight site served at
+`https://cyber-civitas.github.io`. It holds what spans packages: the layer architecture,
 the fleet vocabulary, the component index, and cross-package decision records. A package's
 own behavior is documented in that package's repository, not here.
 
